@@ -16,6 +16,7 @@ function App() {
   El array que se pasa como segundo parametro se le conoce como dependencias y conrrespecto
   a ese valor cambiará*/
   useEffect(() => {
+    let citasIniciales = JSON.parse(localStorage.getItem('citas'))
     if(citasIniciales) {
       localStorage.setItem('citas', JSON.stringify(citas))
     }else {

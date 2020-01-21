@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 /* en el evento onClick se envia como un arrow functions 
 para que espere a que suceda el evento de onClick
@@ -20,4 +21,8 @@ const Cita = ({cita, deleteCita}) => {
     );
 };
 
+Cita.propTypes = {
+    cita: PropTypes.object.isRequired,
+    deleteCita: PropTypes.func.isRequired
+}
 export default Cita;
